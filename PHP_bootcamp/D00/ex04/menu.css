@@ -1,0 +1,48 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    menu.css                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cnaude <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/02 20:52:29 by cnaude            #+#    #+#              #
+#    Updated: 2018/10/02 20:52:31 by cnaude           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+body{
+	font-family:Verdana;
+}
+
+a, a:hover, a:visited, a:focus{
+	color:inherit;
+	text-decoration: red;
+}
+
+ul.menu li{
+	display: none;
+	padding:10px 10px 10px 20px;
+	border-top:1px solid black;
+}
+
+ul.menu li:first-child{
+	display: block;
+	border-top:0px;
+	padding-left:10px;
+}
+
+ul.menu:hover li{
+	display:block;
+}
+
+ul.menu:hover li:first-child{
+	background-color: green;
+}
+
+ul.menu{
+	background-color:blue;
+	width:150px;
+	padding:0px;
+	float:left;
+}
+

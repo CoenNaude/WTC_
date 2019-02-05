@@ -1,0 +1,85 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    responsive.css                                     :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cnaude <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/02 20:52:08 by cnaude            #+#    #+#              #
+#    Updated: 2018/10/02 20:52:09 by cnaude           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+body{
+	font-family: "Verdana";
+}
+
+h1{
+	text-align:center;
+	font-size:2vw;
+}
+
+div{
+	text-align: center;
+}
+
+p{
+	margin:3px;
+	font-size:1vw;
+}
+
+p.atomic-mass{
+	text-align:right;
+}
+
+h2{
+	text-align:center;
+	margin:5px 0;
+	font-size:1.5vw;
+}
+
+table{
+	width:100%;
+}
+
+td {
+	width:5.55555%;
+}
+
+td.diatomic{
+	background-color: green;
+}
+td.noble-gas{
+	background-color: red;
+}
+td.alkali-metal{
+	background-color: brown;
+}
+td.alkaline-earth{
+	background-color: pink;
+}
+td.metalloid{
+	background-color: purple;
+}
+td.polyatomic{
+	background-color: orange;
+}
+td.transition{
+	background-color: yellow;
+}
+td.post-transition{
+	background-color: blue;
+}
+td.lanthanide{
+	background-color: lime;
+}
+td.actinide{
+	background-color: aqua;
+}
+td.unknown{
+	background-color: silver;
+}
+td.picture {
+		float: center;
+		width: 100%;
+}

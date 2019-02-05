@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<style>
+			#balloon {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="balloon"></div>
+		<script>
+			var diameter = 200;
+			var ballon = document.getElementById("balloon");
+			var color = ["red", "green", "blue"];
+			var i = 0;
+			function updateDiameter()
+			{
+				if (diameter >= 420 || diameter < 200)
+					diameter = 200;
+				ballon.style.width = diameter + "px";
+				ballon.style.height = diameter + "px";
+			}
+			ballon.addEventListener("click", function()
+			{
+				diameter += 10;
+				if (i == 2)
+					i = 0;
+				else
+					i++;
+				ballon.style.background = color[i];
+				updateDiameter();
+			});
+			ballon.addEventListener("mouseleave", function() {
+				diameter -= 5;
+				if (i == 0)
+					i = 2;
+				else
+					i--;
+				ballon.style.background = color[i];
+				updateDiameter();
+			});
+		</script>
+	</body>
+</html>
