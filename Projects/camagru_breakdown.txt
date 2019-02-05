@@ -1,0 +1,69 @@
+alpha channel
+superposition
+
+select image in a list of superposable images (picture frame)
+take picture with webcam, mixing both images
+
+public, likeable, commentable
+
+------------------------------------------------------------
+
+author file
+getUserMedia errors are tolerated
+server-side: php, standard library
+client-side: HTML, CSS, JS
+no frameworks allowed except CSS that doesnt need JS
+PDO abstraction driver to communicate with db
+must be sql queryable
+error mode: PDO :: ERRMODE_EXCEPTION
+NO security leaks
+Any webserver: Apache, Nginx, built in webserver
+compatible with firefox(41+), chrome(46+)
+
+------------------------------------------------------------
+
+Common features	-	Structure as MVC app
+					Decent page layout(header, main section, footer)
+					adapted layout small resolution, mobile compatible
+					secured site
+					correct form validation
+
+User features	-	sign-up requires valid email address, username, password(low level of complexity(md5))
+					confirm account through unique link sent to email
+					login after confirmation using username and password
+					password recovery option
+					disconnect with one click
+					Once connected, modify username, mail address or password
+
+Gallery features-	display all images edited by all users publicly(asc date)
+					only connected users should be able to like and/or comment
+					images must be paginated with at least 5 elements per page
+
+Editing	feature -	Accessibility granted only to verified/connected users
+					reject other users who are not logged in
+					main section -	containing preview of webcam
+									list of superposable images
+									button to capture a picture
+					side section -	thumbnails of previous images taken
+					superposable images must be selectable
+					take-picture-button inactive if no superposable images have been selected
+					final image(superposing images) must be done on the server side(PHP)
+					upload a user image
+					delete own edited images
+
+Constraints		-	Languages -	[Server] PHP
+								[Client] HTML, CSS, JS(only with browser natives API)
+
+					framework -	[Server] None
+								[Client] CSS Frameworks, unless it uses forbidden JS framework
+
+					index.php 			-	entering point of the site, root of file hierarchy
+					config/setup.php 	-	create/recreate the database schema, using info from
+											config/database.php
+					config/database.php -	db configuration, instanced by PDO
+
+Bonus			-	AJAXify exchanges with server
+					live preview of edited image on webcam preview
+					ifinite pagination of the gallery part of the site
+					possibility to share images on social networks
+					render a GIF
